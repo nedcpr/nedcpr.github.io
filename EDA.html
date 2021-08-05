@@ -1,0 +1,248 @@
+<html>
+	<head>
+	<!-- START KEYWORDS -->
+	<meta name="keywords" content="3Ai, cyber-physical systems, Cooper">
+	<!-- END KEYWORDS -->
+	<title>Edward (Ned) Cooper: Exploratory data analysis</title>
+	<LINK REL=StyleSheet HREF="ec.css" TYPE="text/css">
+	<style>
+	
+		a:link {color: #003399; text-decoration: underline; }
+		a:active {color: #0000ff; text-decoration: underline; }
+		a:visited {color: #666666; text-decoration: underline; }
+		a:hover {color: #000000; text-decoration: underline; }	
+
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<!-- TOP BIT OF WHITESPACE -->
+
+<table width=30 height=30 class=topTable><tr><td><img src="images/spacer.gif"></td></tr></table>
+
+<!-- TOP NAVIGATION -->
+
+
+<table class=topTable cellpadding=0 cellspacing=0><tr>
+<td width=60 height=1 class=mainTableCell><img src="images/spacer.gif" width=60 height=1 alt=""></td>
+<td><a href="index.html">Home</a>&nbsp;&nbsp;-&nbsp;&nbsp;</td>
+<td><a href="about.html">About Me</a></td>
+</tr></table>
+
+
+<!-- ANOTHER  BIT OF WHITESPACE -->
+
+<table width=10 height=30 class=topTable><tr><td><img src="images/spacer.gif"></td></tr></table>
+<br>
+
+<!-- LIST NAME -->
+
+<table width=870 cellpadding=0 cellspacing=0 class=mainTable>
+<tr><td width=60 class=mainTableCell><img src="images/spacer.gif" width=60 height=1 alt=""></td>
+<td><p class=bigTitle>Data validation</p>
+</td></tr>
+</table>
+
+
+
+<!-- MAIN TABLE -->
+
+<br>
+<table width=870 cellpadding=0 cellspacing=0 class=mainTable>
+
+<!-- LEFT MARGIN -->
+
+<tr>
+<td width=60 class=mainTableCell><img src="images/spacer.gif" width=60 height=1 alt=""></td>
+
+<!-- SIDEBAR -->
+<td width=300 class=mainTableCell valign=top>
+
+
+<div class=bodyText>
+<br>
+
+This post focuses on the process I am developing to conduct data validation during machine learning model development.
+<br><br>
+The content for this post is based on skills sessions, one homework task and survey analysis conducted for a group project in
+another subject. Links to notebooks referred to throughout the post are provided below.
+<br><br>
+</div>
+
+<div class=mainLinks>
+
+<br>
+<b>Key links</b><br> 
+<br>
+
+<a href="https://colab.research.google.com/drive/1WredSxzqNXM9vJ4UZfLOlXwT8Fp2Yrfs?usp=sharing">Classification notebook</a>
+<br><br>
+
+<a href="https://colab.research.google.com/drive/1BPL4sFUTm6-31sgbPQHw3LX2BTPkbY5T">Fairness notebook</a>
+<br><br>
+
+</div>
+
+<!-- MIDDLE WHITE SPACE -->
+<td width=40 class=mainTableCell><img src="images/spacer.gif" width=60 height=1 alt=""></td>
+
+<!-- POST -->
+<td width=550 class=mainTableCell valign=top>
+
+<table width=10 height=10 class=topTable><tr><td><img src="images/spacer.gif"></td></tr></table>
+
+<img src="images/Pipeline_EDA.png" width=550 height=315 
+ style="border:1px solid #ccc"><br> 
+
+<br>
+
+<p>
+	My overall intent in studying machine learning (ML) is to better understand key human decision points when constructing
+	ML models, and the impact of those decisions on the outcomes of the models. This aligns with my future career
+	interests in developing and auditing ML models in the public policy and social services spheres. Given these intentions,
+	data validation was a key stage of the ML pipeline (see diagram above) when studying ML at 3Ai. 
+</p>
+
+<p>
+	The first section below presents skills I have stated to develop in Exploratory Data Analysis (EDA) - a critical process of performing
+	initial validation of data to better understand its characteristics. EDA allows one to discover patterns, spot anomalies,
+	test hypotheses and check assumptions in data. The section further below demonstrates my developing understanding of additional
+	validation steps to identify bias in datasets.
+</p>
+
+<p>
+	Throughout the semester I intended to develop my own high-level, repeatable process to conduct EDA and broader data validation.
+	This process is intended to guide my interrogation of existent datasets before using them in ML models, and for guiding and informing
+	any data generation activities I perform in the future.
+</p>
+
+<p>
+	<b>Initial investigations</b>
+	<br><br>
+	At the start of this semester I knew how to perform basic EDA using the pandas library in python, as well as more in-depth
+	EDA using Microsoft Excel and Tableau. This more in-depth EDA is demonstrated in this
+	<a href="https://sway.office.com/s/H6Ni1AhBGFqYSlTA/embed">data wrangling and visualiation task</a> produced in semester 1.
+	The task demonstrates my ability to spot some anomalies and check some assumptions in data using Microsoft Excel and Tableau.
+	This semester I intended to improve my ability to perform EDA through graphical techniques within Python (specifically with
+	the matplotlib and seaborn packages).
+	<br><br>
+	The video below demonstrates my application of pandas functions and methods I learnt in the first semester to a dataset of
+	zoo animals (see ‘Classification notebook’ linked opposite for further detail, under the heading 'Data validation').
+	This includes the use of <i>descriptive statistics</i> to understand the data,	by checking shape, info, counting
+	unique values and counting null values.	As the data contained categorical variables, the range of graphical techniques I could employ
+	was limited. However, I was able to expand my skillset by plotting the data using column and bar charts (using the matplotlib
+	and seaborn packages). This enabled me to identify, for example, the count of instances by type of animal, and the count of
+	instances by various attributes. The Classification notebook also demonstrates the use of a <i>correlation matrix</i> to identify
+	relationships in the data.
+</p>
+
+	<iframe width="550" height="315" src="https://www.youtube.com/embed/IK1DuFK6s34??start=21&end=62" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<br><br>
+
+<p>
+	The 'Classification notebook' also includes reference to a dataset generated by fellow students and staff on ANU campus coffee preferences.
+	I wrangled this data in excel before developing a ML model with the data in python. This wrangling included removing rows with <i>missing feature values</i> from the dataset.
+	It would have been better to undertake the entire process in Python. This would have expanded my skillset in this area, as well as contained all analysis in
+	a single, documented python notebook rather than multiple files. Using separate programs for EDA and model generation (e.g. Microsoft Excel and Python) would
+	complicate auditing and scaling ML models.
+	<br><br>
+	
+	Based on a review of articles on the <a href="https://towardsdatascience.com/">Towards Data Science</a> blog, I intend to use <i>distribution plots</i>
+	for categorical variables as part of my EDA process in the future to identify outliers in the data. In summary, my experiences with the zoo and coffee preferences datasets
+	and further research after completing the homework task led to the inclusion of the following four steps for my EDA process ongoing (in order):
+	<br><br>
+	1. Use descriptive statistics to understand data
+	<br><br>
+	2. Identify missing values and document decisions on what you do with those values
+	<br><br>
+	3. Plot distributions and identify outliers;
+	<br><br>
+	4. Use correlation matrices to identify relationships in the data.
+</p>
+
+<p>
+	<b>Identifying bias through exploratory data analysis</b>
+	<br><br>
+	Later in the semester I attempted to answer the question: How can I use EDA to identify bias in data?
+	I understand data bias as an instance where available data is not representative of a population of study.
+	The <a href=https://developers.google.com/machine-learning/crash-course/fairness/types-of-bias>Google Machine Learning (ML) Crash Course</a> provided a
+	helpful list of types of bias and a framework for identifying ‘red flags’ for bias in a dataset. In summary, the course encourages investigating
+	data for:
+	<br><br>
+	1. missing feature values (with a bias lens);
+	<br><br>
+	2. unexpected feature values; and
+	<br><br>
+	3. data skew
+	<br><br>
+	In the video below I demonstrate how I applied this process of investigation to identifying potential sources of bias in the UC Irvine Census dataset.
+	The video refers to the 'Fairness notebook' linked opposite - see the sections after the heading 'Analyzing the Adult Dataset with Facets'.
+	The video demonstrates how I used the <a href=https://pair-code.github.io/facets>Facets tool</a> produced by Google PAIR to perform this investigation, which
+	I have not had the chance to critically review but look forward to after the course during my capstone with Google PAIR.
+	<br><br>
+	<iframe width="550" height="315" src="https://www.youtube.com/embed/TSHConzXWKg?&end=222" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<br><br>
+	Referring back to the Classification notebook linked opposite, had I reviewed the list of types of bias earlier
+	I may have identified ‘group attribution bias’ during EDA in the coffee preferences dataset. Specifically, there
+	may have been some ‘in-group bias’ in the data collected for the coffee preferences dataset
+	as some characteristics were common across respondents to the survey, for example proximity
+	to Coffee Grounds as staff/students of 3Ai. In addition, as discussed earlier, I removed rows with missing feature values
+	in the coffee preferences dataset without much thought on the effect on bias in the dataset or model.
+	Was there any cause for missing values in the data collection process that may indicate biases responsible for that missing data?
+	Did removing blank rows increase underrepresentation of any feature values?
+	<br><br>
+	The video above demonstrates how one might identify potential sources of bias in a dataset they are unfamiliar with, drawing on EDA.
+	However, an understanding of how data is generated may uncover additional sources of bias. For example, I was able to identify 'group attribution bias'
+	in the coffee dataset as I knew how the data was generated. On the other hand, in the UC Irvine dataset referred to in the video and ‘Fairness notebook’
+	I did not know how the data was generated, and was limited to identifying potential sources of bias based on observations of the dataset alone.
+	<br><br>
+	This reflection has real consequences for many datasets relating to policy or social services. For example, datasets of instances of criminal offending
+	are generated based on arrest rates. Arrest rates do not reflect actual instances of criminal offending. In addition, arrest rates for some sub-groups
+	in the general population may be higher than others based on factors other than criminal offending - for example, the degree and nature of policing of
+	certain sub-groups vs. others (this is a concept I first encountered during law school, particularly in
+	<a href=http://www.austlii.edu.au/au/journals/CICrimJust/2006/1.pdf>this article</a> by Professor Chris Cuneen,
+	and later came to understand in greater depth while working at the Aboriginal Legal Service (NSW/ACT).
+	Using EDA alone may identify potential sources of data bias in crime datasets, though knowledge of systemic discrimination in the use of arrest
+	for Indigenous Australians (for example) is required to extend this identification to a conclusion.
+	<br><br>
+	Therefore, to identify bias  during data validation I would recommend an additional step to that outlined by Google in the ML Crash Course
+	– investigate how the data was collected and annotated and consider how bias might have affected those processes.
+	This would also encourage the documentation of processes used and decisions made during my own data	collection and annotation,
+	to inform the production of machine learning models.
+</p>
+
+<p>
+	<b>Final process</b>
+	<br><br>
+	Overall, the process for data validation I will take forward is as follows:
+	<br><br>
+	<i>To verify and understand the data</i>
+	<br>
+	1. Use descriptive statistics to understand data
+	<br>
+	2. Identify missing values and document decisions on what you do with those values
+	<br>
+	3. Plot distributions and identify outliers;
+	<br>
+	4. Use correlations to identify relationships in the data.
+	<br><br>
+	<i>To identify bias in the data</i>
+	<br>
+	1. Identify and consider the impact of missing feature values (with a bias lens);
+	<br>
+	2. Identify and consider the impact of unexpected feature values; and
+	<br>
+	3. Identify and consider the impact of data skew
+	<br>
+	4. Investigate the process for generating the data and consider any impact on bias
+	<br><br>
+</p>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

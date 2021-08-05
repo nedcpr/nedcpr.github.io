@@ -1,0 +1,71 @@
+body, table {
+    font-family: Helvetica;
+    font-size: 9pt;
+    line-height: 135%;
+    margin: 0 0 0 0;
+    color: #666666;
+    text-align: justify;
+
+}
+
+img {
+image-rendering: auto;
+image-rendering: crisp-edges;
+image-rendering: pixelated;
+}
+
+.projectTitle {
+  color: #444444;
+  font-weight: 700;
+}
+
+.projectTable {
+    font-family: Helvetica;
+    margin: 0 0 0 0;
+   color: #666666;
+}
+
+.heading {
+  color: #000000;
+  text-style: bold;
+}
+
+.listPage {
+
+  text-transform: none;
+  padding: 20 0 10 0;
+  border-bottom: 1px dotted #999999;
+  margin: 0 0 10 0;
+
+  a:link {color: #003399; text-decoration: underline; }
+  a:active {color: #0000ff; text-decoration: underline; }
+  a:visited {color: #999999; text-decoration: underline; }
+  a:hover {color: #000000; text-decoration: underline; }
+
+}
+
+.mainLinks {
+
+  text-transform: none;
+  padding: 20 0 10 0;
+  border-top: 1px dotted #999999;
+  margin: 0 0 10 0;
+
+  a:link {color: #003399; text-decoration: underline; }
+  a:active {color: #0000ff; text-decoration: underline; }
+  a:visited {color: #999999; text-decoration: underline; }
+  a:hover {color: #000000; text-decoration: underline; }
+
+}
+
+.bigTitle {
+    font-family: Helvetica;
+    font-size: 18pt;
+    color: #003399;
+}
+
+.acknowledgement {
+  font-family: Helvetica;
+  font-size: 7pt;
+  color: #666666;
+}
